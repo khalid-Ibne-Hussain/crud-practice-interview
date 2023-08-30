@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 
-const AddButton = () => {
-    const [count, setCount] = useState(0);
+const AddSecondButton = () => {
+
+    const [add, setAdd] = useState(-1);
     const [buttons, setButtons] = useState([]);
 
-    const handleAddButtonClick = () => {
-        setCount(count + 1);
-        setButtons([...buttons, count + 1]);
+    const add2ndButtonClick = () => {
+        setAdd(add + 1);
+        setButtons([...buttons, add + 1]);
     }
 
     return (
-        <div>
-            <button onClick={handleAddButtonClick}>Add</button>
+        <div className='button2'>
+            <button onClick={add2ndButtonClick}>add2</button>
             <span>
                 {
                     buttons.map(buttonN => (
@@ -23,4 +24,4 @@ const AddButton = () => {
     );
 };
 
-export default AddButton;
+export default AddSecondButton;
